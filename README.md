@@ -1,2 +1,10 @@
 # AI_learning
-The repositiory of AI learning
+存放人工智能课程学习
+
+src：存放源码
+
+rep：存放实验报告
+
+|时间|更新内容|
+|----|----|
+|2022.2.24|创建仓库并上传第一周的代码|
