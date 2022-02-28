@@ -1,0 +1,12 @@
+Query node from Arad to Bucharest
+Distance is 418
+Path is Arad->Sibiu->RimnicuVilcea->Pitesti->Bucharest
+
+Query node from Arad to Craiova
+Distance is 366
+Path is Arad->Sibiu->RimnicuVilcea->Craiova
+
+Query node from Bucharest to Craiova
+Distance is 239
+Path is Bucharest->Pitesti->Craiova
+
