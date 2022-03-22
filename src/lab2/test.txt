@@ -1,0 +1,6 @@
+4
+Father(Jack,Dell)
+Father(Dell,Stephen)
+Grandfather(Jack,Stephen)
+Father(Dell,Seth)
+Grandfather(x,y)
