@@ -58,24 +58,29 @@
 #     },
 # }
 # print(cities)
-a = 1
-print(id(a), type(a))
-a = 2
-print(id(a), type(a))
-a = "aaa"
-print(id(a), type(a))
-a = 'bbb'
-print(id(a), type(a))
-b = [1, 2, 3]
-a = (1, 2, b)
-print(id(a), type(a))
-b[1] = 'aaa'
-print(id(a), type(a))
-a = [1, 2, 3]
-print(id(a), type(a))
-a.append(4)
-print(id(a), type(a))
-a = {1:2}
-print(id(a), type(a))
-a[3] = 4
-print(id(a), type(a))
+# a = 1
+# print(id(a), type(a))
+# a = 2
+# print(id(a), type(a))
+# a = "aaa"
+# print(id(a), type(a))
+# a = 'bbb'
+# print(id(a), type(a))
+# b = [1, 2, 3]
+# a = (1, 2, b)
+# print(id(a), type(a))
+# b[1] = 'aaa'
+# print(id(a), type(a))
+# a = [1, 2, 3]
+# print(id(a), type(a))
+# a.append(4)
+# print(id(a), type(a))
+# a = {1:2}
+# print(id(a), type(a))
+# a[3] = 4
+# print(id(a), type(a))
+line = 'aaa'
+tmp = line
+line = 'bbb'
+
+print(tmp)
