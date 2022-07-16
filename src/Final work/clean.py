@@ -9,25 +9,25 @@
 全部保存成小写
 结果保存至 high_time.csv
 """
-
+# from nltk.corpus import stopwords
 stopwords = ['a', 'in','to']
-fw = open('./dataset/tidy_test.csv', 'w', encoding='utf-8')
-fw1 = open('./dataset/final.csv', 'w', encoding='utf-8')
+fw = open('./dataset/tidy_train.csv', 'w', encoding='utf-8')
+fw1 = open('./dataset/high_times.csv', 'w', encoding='utf-8')
 cnt = {}
 if __name__ == '__main__':
     fl = True
 
-    with open('./dataset/test.csv', encoding='utf-8') as file_object:
+    with open('./dataset/train.csv', encoding='utf-8') as file_object:
         for line in file_object.readlines():
             if fl:
                 fl = False
                 continue
             constr = ''
             line = line.split(',')
-            fw.write(line[0] + ',')
+            fw.write(line[1] + ',')
             word = ''
             for i in range(len(line)):
-                if i == 0:
+                if i == 0 and i == 1:
                     continue
                 word += line[i]
             constr = ''
@@ -36,7 +36,7 @@ if __name__ == '__main__':
                     constr += uchar.lower()
             fw.write(constr + '\n')
     fw.close()
-    with open('./dataset/tidy_test.csv', encoding='utf-8') as file_object:
+    with open('./dataset/tidy_train.csv', encoding='utf-8') as file_object:
         for line in file_object.readlines():
             line = line.split(',')
             line[1] = line[1].strip()
@@ -46,7 +46,7 @@ if __name__ == '__main__':
                     cnt[word] += 1
                 else:
                     cnt[word] = 1
-    with open('./dataset/tidy_test.csv', encoding='utf-8') as file_object:
+    with open('./dataset/tidy_train.csv', encoding='utf-8') as file_object:
         for line in file_object.readlines():
             line = line.split(',')
             line[1] = line[1].strip()
@@ -55,8 +55,8 @@ if __name__ == '__main__':
                 # if word != '' and cnt[word] > 5 and (word not in stopwords.words('english')):
                 if word != '' and cnt[word] > 10 and (word not in stopwords):
                     fw1.write(word + ' ')
-            # fw1.write(',' + line[0] + '\n')
-            fw1.write('\n')
+            fw1.write(',' + line[0] + '\n')
+            # fw1.write('\n')
     fw1.close()
 
 
